@@ -1,5 +1,5 @@
 {
-  "name": "skeleten-engine",
+  "name": "skeleten",
   "version": "4.0.0",
   "description": "SKELETEN AI-First Technical Documentation Engine and Intent Drift Sentry.",
   "main": "bin/cli.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SSTECH/skeleten.git"
+    "url": "https://github.com/eybersjp/Skeleten.git"
   },
   "keywords": [
     "ai",
@@ -22,7 +22,7 @@
     "agentic",
     "drift"
   ],
-  "author": "SSTECH",
+  "author": "eybersjp",
   "license": "MIT",
   "files": [
     "bin/cli.js"
