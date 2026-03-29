@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./skeleten-logo.png" width="300" alt="SKELETEN Logo">
+</p>
+
 # 🩻 SKELETEN  
 *The AI-First Technical Documentation & Intent Drift Sentry Engine.*
 
