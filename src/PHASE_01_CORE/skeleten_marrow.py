@@ -1,10 +1,21 @@
-from tree_sitter_languages import get_parser, get_language
+import tree_sitter_python as tspython
+import tree_sitter_javascript as tsjs
+import tree_sitter_typescript as tsts
+from tree_sitter import Language, Parser
 
 class MarrowParser:
     def __init__(self, lang_id):
         self.lang_id = lang_id
-        self.parser = get_parser(lang_id)
-        self.language = get_language(lang_id)
+        if lang_id == "python":
+            self.language = Language(tspython.language())
+        elif lang_id == "javascript":
+            self.language = Language(tsjs.language())
+        elif lang_id == "typescript":
+            self.language = Language(tsts.language())
+        else:
+            raise ValueError(f"Unsupported language: {lang_id}")
+        
+        self.parser = Parser(self.language)
 
     def extract_bones(self, code):
         if self.lang_id == "python":
@@ -38,4 +49,4 @@ def run_marrow_probe(path):
     ext_map = {".py": "python", ".ts": "typescript", ".js": "javascript"}
     lang = ext_map.get(path.suffix.lower())
     if not lang: return []
-    with open(path, "rb") as f: return MarrowParser(lang).extract_bones(f.read())
+    with open(path, "rb") as f: return MarrowParser(lang).extract_bones(f.read())

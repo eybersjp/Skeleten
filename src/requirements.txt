@@ -1,5 +1,7 @@
-tree-sitter
-tree-sitter-languages
+tree-sitter>=0.21.0
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-typescript
 pdfplumber
 sentence-transformers
 rich
