@@ -1,0 +1,21 @@
+# Python Environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+
+# SKELETEN Output Context
+dist/
+skeleten_mnc.json
+SKELETEN_API_REFERENCE.md
+
+# Node Infrastructure
+node_modules/
+package-lock.json
+
+# Build Directories
+bin/

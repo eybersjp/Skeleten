@@ -1,0 +1,1 @@
+def generate_api_spec(mnc_json): return {'openapi': '3.0.0', 'info': {'title': 'SKELETEN_AUTO_GEN'}}

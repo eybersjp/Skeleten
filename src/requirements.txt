@@ -1,0 +1,6 @@
+tree-sitter
+tree-sitter-languages
+pdfplumber
+sentence-transformers
+rich
+faiss-cpu

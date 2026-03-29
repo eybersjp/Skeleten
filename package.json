@@ -1,0 +1,30 @@
+{
+  "name": "skeleten-engine",
+  "version": "4.0.0",
+  "description": "SKELETEN AI-First Technical Documentation Engine and Intent Drift Sentry.",
+  "main": "bin/cli.js",
+  "bin": {
+    "skeleten": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node scripts/build.js && echo 'Build successful'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SSTECH/skeleten.git"
+  },
+  "keywords": [
+    "ai",
+    "documentation",
+    "generator",
+    "tree-sitter",
+    "agentic",
+    "drift"
+  ],
+  "author": "SSTECH",
+  "license": "MIT",
+  "files": [
+    "bin/cli.js"
+  ]
+}
