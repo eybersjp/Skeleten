@@ -90,16 +90,43 @@ def health_check():
         print("Health Check Failed!")
         sys.exit(1)
 
+def display_logo():
+    ORANGE = '\033[38;5;208m'
+    WHITE = '\033[97m'
+    RESET = '\033[0m'
+    
+    logo = f"""
+{ORANGE}      _________________
+     /                /
+    /      __________/
+   /      /
+  /      /____________      _  _________  _      _________  _________  _      _
+ /                  /     | |/ /|  ____|| |    |  ____||__   __||  ____|| \\    | |
+/___________      _/      | ' / | |__   | |    | |__      | |   | |__   |  \\   | |
+           /     /        |  <  |  __|  | |    |  __|     | |   |  __|  | |\\ \\  | |
+ _________/     /         | . \\ | |____ | |____| |____    | |   | |____ | | \\ \\ | |
+/______________/          |_|\\_\\|______||______||______|   |_|   |______||_|  \\___|
+
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _   [✓]
+{RESET}"""
+    print(logo)
+
 if __name__ == "__main__":
+    display_logo()
+    
     p = argparse.ArgumentParser()
     p.add_argument("--drift-check", action="store_true")
     p.add_argument("--health-check", action="store_true")
+    p.add_argument("--wizard", action="store_true")
     args = p.parse_args()
 
     if args.drift_check:
         drift_check()
     elif args.health_check:
         health_check()
+    elif args.wizard:
+        from PHASE_00_INTENT.skeleten_wizard import run_wizard
+        run_wizard()
     else:
         print("\n" + "="*80)
         print("SKELETEN // MASTER_SEQUENCER // v4.0")

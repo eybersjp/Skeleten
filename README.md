@@ -45,5 +45,41 @@ Immediately upon running initialization, SKELETEN provisions your `.agents` conf
 We recognize that Python dependency scopes (`requirements.txt`) can shatter fragile external mono-repos.
 We built SKELETEN's extraction engine to autonomously invoke a `node` child process during execution that guarantees full virtual environment (`venv`) isolation. `run.py` dynamically sniffs `exec_path` strings to force reroutes into `.skeleten/venv`—acting independently of your root interpreter context.
 
+## 🎨 Terminal Branding
+
+To have the SKELETON identity appear every time you open your terminal, appearing alongside the `skeleten` command, add the following block to the end of your `~/.bashrc` or `~/.zshrc` file:
+
+```bash
+# KELETEN Terminal Logo - SSTECH Protocol
+function keleten_logo() {
+    local ORANGE='\033[38;5;208m'
+    local WHITE='\033[97m'
+    local RESET='\033[0m'
+
+    cat << EOF
+
+${ORANGE}      _________________
+     /                /
+    /      __________/
+   /      /
+  /      /____________${WHITE}      _  _________  _      _________  _________  _      _
+${ORANGE} /                  /${WHITE}     | |/ /|  ____|| |    |  ____||__   __||  ____|| \    | |
+${ORANGE}/___________      _/${WHITE}      | ' / | |__   | |    | |__      | |   | |__   |  \   | |
+${ORANGE}           /     /${WHITE}        |  <  |  __|  | |    |  __|     | |   |  __|  | |\ \  | |
+${ORANGE} _________/     /${WHITE}         | . \ | |____ | |____| |____    | |   | |____ | | \ \ | |
+${ORANGE}/______________/ ${WHITE}         |_|\_\|______||______||______|   |_|   |______||_|  \___|
+
+${ORANGE}  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _   [✓]
+${RESET}
+EOF
+}
+
+# Execute on login
+keleten_logo
+
+# Register alias
+alias keleten='keleten_logo'
+```
+
 ## 📜 License
 Available underneath standard MIT provisions. Developed cleanly by eybersjp.
