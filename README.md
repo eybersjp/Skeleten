@@ -2,7 +2,7 @@
 *The AI-First Technical Documentation & Intent Drift Sentry Engine.*
 
 [![NPM Version](https://img.shields.io/npm/v/skeleten)](https://npmjs.com/package/skeleten)
-[![CI Build](https://github.com/SSTECH/skeleten/actions/workflows/ci.yml/badge.svg)](https://github.com/SSTECH/skeleten/actions)
+[![CI Build](https://github.com/eybersjp/Skeleten/actions/workflows/ci.yml/badge.svg)](https://github.com/eybersjp/Skeleten/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **SKELETEN** is an autonomous documentation framework designed to be deployed directly inside your source repository. It parses abstract syntax architectures using `tree-sitter`, cross-references the intelligence with vector similarity via `sentence-transformers`, and actively monitors your intent-to-code gap to identify **Documentation Drift** before bad code ships.
@@ -42,4 +42,4 @@ We recognize that Python dependency scopes (`requirements.txt`) can shatter frag
 We built SKELETEN's extraction engine to autonomously invoke a `node` child process during execution that guarantees full virtual environment (`venv`) isolation. `run.py` dynamically sniffs `exec_path` strings to force reroutes into `.skeleten/venv`—acting independently of your root interpreter context.
 
 ## 📜 License
-Available underneath standard MIT provisions. Developed cleanly by SSTECH.
+Available underneath standard MIT provisions. Developed cleanly by eybersjp.
